@@ -1,0 +1,8 @@
+.modify-remove{
+  color: red;
+  padding-left: 30px;
+}
+
+.modify-remove:hover{
+  color: blue;
+}
