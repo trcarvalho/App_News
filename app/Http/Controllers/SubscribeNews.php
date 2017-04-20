@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Notices;
+use App\News;
 
 class SubscribeNews extends Controller
 {
@@ -15,10 +15,14 @@ class SubscribeNews extends Controller
 
     public function store()
     {
-      // dd(Notices::all());
-      Notices::create([
+      $this->validate(request(),[
+       'title'      => 'required',
+       'bodynews'   => 'required'
+     ]);
+
+      News::create([
        'title'      => request('title'),
-       'bodyNotice' => request('bodyNotice')
+       'bodynews'   => request('bodynews')
        ]);
       return view('cadastro');
 

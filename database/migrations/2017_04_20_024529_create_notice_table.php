@@ -13,10 +13,10 @@ class CreateNoticeTable extends Migration
      */
     public function up()
     {
-        Schema::create('notices', function (Blueprint $table) {
+        Schema::create('news', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->text('bodyNotice');
+            $table->text('bodynews');
             $table->string('dirFigure')->nullable();
             $table->timestamps();
         });
@@ -29,6 +29,6 @@ class CreateNoticeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('notices');
+        Schema::dropIfExists('news');
     }
 }

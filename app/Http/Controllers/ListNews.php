@@ -3,16 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Notices;
+use App\News;
 
 class ListNews extends Controller
 {
-    public function index()
+    public function index() // método que direciona para a página de visualização de Notícias
     {
-      $notices_query =  new Notices;
-      $notices       = $notices_query->paginate(1);
-      // dd($notices->links());
-      return view('listar_noticias', compact('notices'));
+      $news_query =  new News;
+      $news       = $news_query->paginate(5); //número de páginas a serem apresentadas
+      return view('listar_noticias', compact('news'));
 
     }
 }

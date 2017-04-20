@@ -10,8 +10,8 @@
 <body>
   <div class="container">
     <ul class="nav nav-tabs">
-        <li role="presentation" class="active" id = "add_notices"><a href="{{asset('/')}}">Cadastrar Notícia</a></li>
-        <li role="presentation" id = "list_of_notices"><a href="{{asset('/listar_noticias')}}">Listar Notícias</a></li>
+        <li role="presentation" class="active" id = "add_news"><a href="{{asset('/')}}">Cadastrar Notícia</a></li>
+        <li role="presentation" id = "list_of_news"><a href="{{asset('/listar_noticias')}}">Listar Notícias</a></li>
         <li role="presentation" id = "remove_notice"><a href="{{asset('/excluir')}}">Remover Notícia</a></li>
     </ul>
     <div class="row">
@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-md-offset-2 col-md-8">
               <div class="input-group col-md-8">
-                  <input type="text" class="form-control" placeholder="Search for..." id="title" name="title">
+                  <input type="text" class="form-control" placeholder="Qual título" id="title" name="title" >
               </div><!-- /input-group -->
             </div><!-- /.col-lg-6 -->
           </div>
@@ -35,7 +35,7 @@
               <div class="col-md-offset-2 col-md-8">
                 <div class="input-group col-md-8">
                   <label for="comment">Descrição da Notícia:</label>
-                  <textarea class="form-control" rows="5" id="bodyNotice" name = "bodyNotice"></textarea>
+                  <textarea class="form-control" rows="5" id="bodyNotice" name = "bodynews" ></textarea>
                 </div>
               </div>
             </div>
@@ -54,7 +54,17 @@
               </div>
             </div>
           </div>
-          </form>
+        </form>
+        @if(count($errors))
+          <div class="alert alert-danger col-md-4">
+            <ul>
+                @foreach($errors->all() as $error)
+                   {{$error}}
+                @endforeach
+            </ul>
+            <br>
+          </div>
+        @endif
       </div>
     </div>
 

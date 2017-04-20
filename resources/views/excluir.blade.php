@@ -12,8 +12,8 @@
   <div class="container">
 
     <ul class="nav nav-tabs">
-        <li role="presentation" id = "add_notices"><a href="{{asset('/')}}">Cadastrar Notícia</a></li>
-        <li role="presentation" id = "list_of_notices"><a href="{{asset('/listar_noticias')}}">Listar Notícias</a></li>
+        <li role="presentation" id = "add_news"><a href="{{asset('/')}}">Cadastrar Notícia</a></li>
+        <li role="presentation" id = "list_of_news"><a href="{{asset('/listar_noticias')}}">Listar Notícias</a></li>
         <li role="presentation" class="active" id = "remove_notice"><a href="{{asset('/excluir')}}">Remover Notícias</a></li>
     </ul>
     <div class="row" style="padding-top:36px">
@@ -23,7 +23,7 @@
             <th class="col-md-10" >Título da Notícia</th>
             <th class="col-md-2" >Remover</th>
           </tr>
-          @foreach ($list_remove_notices as $notice)
+          @foreach ($list_remove_news as $notice)
           <tr class="row">
             <th class="col-md-10" >{{$notice->title}}</th>
             <th class="col-md-2" id = {{$notice->id}} href={{ asset('excluir/') }}><span class="glyphicon glyphicon-remove modify-remove" style="color:red padding-left: 30px"aria-hidden="true"></span></th>
