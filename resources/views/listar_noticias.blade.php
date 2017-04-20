@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
 <head>
@@ -15,6 +16,24 @@
         <li role="presentation" class="active" id = "list_of_notices"><a href="{{asset('/listar_noticias')}}">Listar Notícias</a></li>
         <li role="presentation" id = "remove_notice"><a href="{{asset('/excluir')}}">Remover Notícias</a></li>
     </ul>
+    <div class="row" style="padding-top:36px">
+      <div class="col-md-offset-3 col-md-6">
+        <table class="table">
+          <tr class="row">
+            <th class="col-md-10" >Título da Notícia</th>
+            <th class="col-md-2" >Remover</th>
+          </tr>
+          @foreach ($notices as $notice)
+          <tr class="row">
+            <th class="col-md-10" >{{$notice->title}}</th>
+            <th class="col-md-2" id = {{$notice->id}} href={{ asset('excluir/') }}><span class="glyphicon glyphicon-remove modify-remove" style="color:red padding-left: 30px"aria-hidden="true"></span></th>
+          </tr>
+          @endforeach
+
+        </table>
+        {{$notices->links()}}
+      </div>
+
 
   </div>
 

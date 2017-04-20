@@ -12,4 +12,15 @@ class SubscribeNews extends Controller
       return view('cadastro');
 
     }
+
+    public function store()
+    {
+      // dd(Notices::all());
+      Notices::create([
+       'title'      => request('title'),
+       'bodyNotice' => request('bodyNotice')
+       ]);
+      return view('cadastro');
+
+    }
 }

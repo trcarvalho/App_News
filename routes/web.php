@@ -14,11 +14,9 @@
 
 Route::get('/', 'SubscribeNews@index');
 
-// Route::get('cadastro', function () {
-// });
+Route::post('/store', 'SubscribeNews@store');
 
 Route::get('listar_noticias','ListNews@index');
-
 
 Route::get('excluir', 'RemoveNews@index');
 
