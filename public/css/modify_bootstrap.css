@@ -6,3 +6,17 @@
 .modify-remove:hover{
   color: blue;
 }
+body{
+  background-color: #f3f3f3 !important;
+}
+
+.blog-post{
+  background-color: #fcfcfc !important;
+}
+
+.div_form_create_news{
+  border: 2px solid #142b55;
+  background-color: #fafafa;
+  margin: 50px 0;
+  padding: 25px 0;
+}

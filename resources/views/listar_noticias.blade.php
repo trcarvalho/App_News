@@ -8,6 +8,8 @@
   <title>Listar Noticia</title>
   <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
   <link href="{{ asset('/css/list_news.css') }}" rel="stylesheet">
+  <link href="{{ asset('/css/modify_bootstrap.css') }}" rel="stylesheet">
+
 </head>
 <body>
   <div class="container">
@@ -18,12 +20,16 @@
         <li role="presentation" id = "remove_notice"><a href="{{asset('/excluir')}}">Remover Notícias</a></li>
     </ul>
     <div class="row" style="padding-top:36px">
-      <div class="col-md-offset-3 col-md-6">
+      <div class="col-md-offset-2 col-md-8">
           @foreach ($news as $single_news)
           <div class="blog-post">
             <h2 class="blog-post-title">{{$single_news->title}}</h2>
              <p class="blog-post-meta">{{$single_news->created_at->toFormattedDateString()}} </p>
-            <p style = "font-family:Times New Roman, Georgia, Serif; font-size:18px; text-align: justify ">{{$single_news->bodynews}}</p>
+             <div class="row">
+               <div class="col-md-offset-1 col-md-10">
+                 <p style = "font-family:Times New Roman, Georgia, Serif; font-size:18px; text-align: justify ">{{$single_news->bodynews}}</p>
+               </div>
+             </div>
             <hr>
           </div>
           @endforeach
