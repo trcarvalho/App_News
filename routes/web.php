@@ -10,9 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function()
+{
+  return view('welcome');
 
+});
 
-Route::get('/', 'SubscribeNews@index');
+Route::get('/cadastro', 'SubscribeNews@index');
 
 Route::post('/store', 'SubscribeNews@store');
 
@@ -21,3 +25,7 @@ Route::get('listar_noticias','ListNews@index');
 Route::get('excluir', 'RemoveNews@index');
 
 Route::get('excluir/{remove}', 'RemoveNews@remove');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

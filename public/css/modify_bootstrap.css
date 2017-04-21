@@ -7,11 +7,12 @@
   color: blue;
 }
 body{
-  background-color: #f3f3f3 !important;
+  background-color: #fcfcfc !important;
+
 }
 
 .blog-post{
-  background-color: #fcfcfc !important;
+  background-color: #EEE9E9 !important;
 }
 
 .div_form_create_news{
@@ -19,4 +20,17 @@ body{
   background-color: #fafafa;
   margin: 50px 0;
   padding: 25px 0;
+}
+
+.thead-inverse{
+  background-color: #292b2c;
+  color: #ffffff;
+}
+
+.card > img {
+  margin-bottom: .75rem;
+}
+
+.card-text {
+  font-size: 85%;
 }
