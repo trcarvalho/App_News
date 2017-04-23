@@ -27,3 +27,6 @@ Possíveis erros:
   * Causa: O BD foi feito com usuário root.
 
   * Solução: Executar o php  artisan serve como root (#php artisan serve)
+
+
+Para acessar as páginas é necessário criar um usuário e fazer o login.
