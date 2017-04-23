@@ -33,10 +33,10 @@ class SubscribeNews extends Controller
        'bodynews'   => 'required'
      ]);
 
-      News::create([
-       'title'      => request('title'),
-       'bodynews'   => request('bodynews'),
-       'dirFigure'  => $split_string_dir[2]
+      News::create([ //salva a notícia no bd
+       'title'      => request('title'), //título da notícia 
+       'bodynews'   => request('bodynews'), //corpo da notícia (descrição)
+       'dirFigure'  => $split_string_dir[2] //split_string_dir[2] encontra-se o nome da imagem bem como sua extensão
        ]);
       return view('cadastro');
 

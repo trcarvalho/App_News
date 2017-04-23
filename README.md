@@ -1,7 +1,8 @@
-# App_newa
+# App_news
 
 
-Este projeto tem por objetivo proporcionar uma aplicação web para cadastro, listagem e remoção de notícia. Sua concepção foi realziada com o uso do framework MVC Laravel. Sua estrutura se dá da seguinte forma:
+Este projeto tem por objetivo proporcionar uma aplicação web para cadastro, listagem e remoção de notícia. Sua concepção foi relaziada com o uso do framework MVC Laravel. Sua estrutura se dá da seguinte forma:
+
  Controllers:
  ------------------
 *ListenNews: Controller responsável pela lista de notícias;
@@ -12,7 +13,7 @@ Este projeto tem por objetivo proporcionar uma aplicação web para cadastro, li
  ------------------
 * Cadastro.blade.php: View referente a página de cadastro de notícia;
 * Remove.blade.php: View referente a página de remoção de notícia;
-* Listar_notícia: View referente a página de lista de notícia.
+* Listar_notícias.blade.php: View referente a página de lista de notícia.
 
 Model:
 ------------------

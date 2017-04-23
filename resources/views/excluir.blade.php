@@ -22,14 +22,14 @@
                      document.getElementById('logout-form').submit();">
             Logout
         </a>
-
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
             {{ csrf_field() }}
         </form></li>
     </ul>
+
     <div class="row" style="padding-top:100px;">
       <div class="col-md-offset-3 col-md-6">
-        <table class="table table-inverse">
+        <table class="table table-inverse"> <!--Tabela que apresentação o título da notíca e seu respecitivo botaõ de excluir-->
           <thead class="thead-inverse">
           <tr class="row">
             <th class="col-md-10" >Título da Notícia</th>
@@ -47,12 +47,10 @@
         </table>
       </div>
     </div>
-
+    
   </div>
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="{{ asset('/js/bootstrap.min.js')}}"></script>
   <script src="{{ asset('/js/Events.js')}}"></script>
 </body>

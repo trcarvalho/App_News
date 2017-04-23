@@ -9,7 +9,7 @@ class RemoveNews extends Controller
 {
     public function index()
     {
-      $list_remove_news = News::all();
+      $list_remove_news = News::all(); //retorna todas as notícias
 
       return view('excluir', compact('list_remove_news'));
     }

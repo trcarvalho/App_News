@@ -25,21 +25,22 @@
                      document.getElementById('logout-form').submit();">
             Logout
         </a>
-
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
             {{ csrf_field() }}
         </form></li>
     </ul>
+
     <div class="row" style="padding-top:56px">
       <div class="col-md-offset-2 col-md-8">
+          <!-- laço responsável por instanciar as notícias na pagina-->
           @foreach ($news as $single_news)
-          <div class="blog-post" style = "padding-top: 20px;">
+          <div class="blog-post" style = "padding-top: 20px;"> <!-- noticia esta nesta div-->
             <div class="row">
               <div class="col-md-offset-2 col-md-8">
-                <h2 class="blog-post-title" style="">{{$single_news->title}}</h2>
+                <h2 class="blog-post-title" style="">{{$single_news->title}}</h2> <!-- título -->
               </div>
             </div>
-             <p class="blog-post-meta" style ="text-indent: 60px; color:#6E7B8B !important;">{{$single_news->created_at->toFormattedDateString()}} </p>
+             <p class="blog-post-meta" style ="text-indent: 60px; color:#6E7B8B !important;">{{$single_news->created_at->toFormattedDateString()}} </p> <!--descrição da notícia -->
              @if(!is_null($single_news->dirFigure))
              <!-- se não existe figura, a div não será criada -->
              <div class=" row">
@@ -53,18 +54,16 @@
                  <p style = "font-family:Times New Roman, Georgia, Serif; font-size:18px; text-align: justify ">{!!nl2br(e($single_news->bodynews))!!}</p>
                </div>
              </div>
-            <hr>
+             <hr>
           </div>
           @endforeach
       </div>
    </div>
  </div>
 <footer class="blog-footer">
-  {{$news->links()}}
+  {{$news->links()}} 
 </footer>
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="{{ asset('/js/bootstrap.min.js')}}"></script>
 </body>
 </html>

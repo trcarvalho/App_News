@@ -21,11 +21,11 @@
                      document.getElementById('logout-form').submit();">
             Logout
         </a>
-
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
             {{ csrf_field() }}
         </form></li>
     </ul>
+
     <div class="row">
       <div class="col-md-offset-2 col-md-8">
         <div class="div_form_create_news">
@@ -70,23 +70,21 @@
           </form>
         </div>
         </div>
-                @if(count($errors))
-          <div class="alert alert-danger col-md-4">
-            <ul>
-                @foreach($errors->all() as $error)
-                   {{$error}}
-                @endforeach
-            </ul>
-            <br>
-          </div>
-        @endif
+            @if(count($errors))
+              <div class="alert alert-danger col-md-4">
+                <ul>
+                  @foreach($errors->all() as $error)
+                    {{$error}}
+                  @endforeach
+                </ul>
+                <br>
+              </div>
+           @endif
       </div>
     </div>
 
-
   </div>
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="{{ asset('/js/bootstrap.min.js')}}"></script>
