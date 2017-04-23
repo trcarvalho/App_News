@@ -5,9 +5,9 @@ Este projeto tem por objetivo proporcionar uma aplicação web para cadastro, li
 
  Controllers:
  ------------------
-*ListenNews: Controller responsável pela lista de notícias;
-*RemoveNews: Controller responsável pela remoção de notícias;
-*SubscribeNews: Controller responsável pelo cadastro de notícias.
+* ListNews: Controller responsável pela lista de notícias;
+* RemoveNews: Controller responsável pela remoção de notícias;
+* SubscribeNews: Controller responsável pelo cadastro de notícias.
 
  View:
  ------------------
@@ -21,9 +21,9 @@ Model:
 
 Possíveis erros:
 ------------------
-*Erro:  
- *SQLSTATE[HY000] [1698] Access denied for user 'root'@'localhost' (SQL: select * from `news`).
+* Erro:  
+ * SQLSTATE[HY000] [1698] Access denied for user 'root'@'localhost' (SQL: select * from `news`).
 
- *Causa: O BD foi feito com usuário root.
+ * Causa: O BD foi feito com usuário root.
 
- *Solução: Executar o php  artisan serve como root (#php artisan serve)
+ * Solução: Executar o php  artisan serve como root (#php artisan serve)
