@@ -22,8 +22,8 @@ Model:
 Possíveis erros:
 ------------------
 * Erro:  
- * SQLSTATE[HY000] [1698] Access denied for user 'root'@'localhost' (SQL: select * from `news`).
+  * SQLSTATE[HY000] [1698] Access denied for user 'root'@'localhost' (SQL: select * from `news`).
 
- * Causa: O BD foi feito com usuário root.
+  * Causa: O BD foi feito com usuário root.
 
- * Solução: Executar o php  artisan serve como root (#php artisan serve)
+  * Solução: Executar o php  artisan serve como root (#php artisan serve)
