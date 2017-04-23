@@ -28,5 +28,12 @@ Possíveis erros:
 
   * Solução: Executar o php  artisan serve como root (#php artisan serve)
 
+* Erro:
+  * Imagem da notícia não carrega;
+
+  * Causa: Não há rota para onde a imagem esta armazenada;
+
+  * Solução: "#php artisan storage:link". 
+
 
 Para acessar as páginas é necessário criar um usuário e fazer o login.
