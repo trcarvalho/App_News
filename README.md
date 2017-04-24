@@ -38,9 +38,9 @@ Possíveis erros:
   * Erro:
     * [ErrorException] symlink: No such file or directory, pode ocorrer quando executa php artisan storage:link;
 
-    * Causa: ...;
+    * Causa: Existe um link do storage de um outro clone;
 
-    * Solução: "executar php artisan tinker e executar o comando link(storage_path('app/public'),public_path('storage'))",sair do tinker e re-executar php artisan storage:link.
+    * Solução: "exluir o link storage, executar php artisan tinker e executar o comando link(storage_path('app/public'),public_path('storage'))",sair do tinker e re-executar php artisan storage:link.
 
 
 
