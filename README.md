@@ -33,7 +33,17 @@ Possíveis erros:
 
   * Causa: Não há rota para onde a imagem esta armazenada;
 
-  * Solução: "#php artisan storage:link". 
+  * Solução: "#php artisan storage:link".
+
+  * Erro:
+    * [ErrorException] symlink: No such file or directory, pode ocorrer quando executa php artisan storage:link;
+
+    * Causa: ...;
+
+    * Solução: "executar php artisan tinker e executar o comando link(storage_path('app/public'),public_path('storage'))",sair do tinker e re-executar php artisan storage:link.
+
+
+
 
 
 Para acessar as páginas é necessário criar um usuário e fazer o login.
