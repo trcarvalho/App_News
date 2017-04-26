@@ -24,7 +24,7 @@ class SubscribeNews extends Controller
       $name_dir_storage = null;
       $split_string_dir = null;
       if(request()->hasFile('dir')){ // verifica se recebeu arquivo
-          $name_dir_storage   = request()->file('dir')->storePublicly('public/'); //pega o path relacioando ao repositório do arquivo
+          $name_dir_storage   = request()->file('dir')->storePublicly('public'); //pega o path relacioando ao repositório do arquivo
           $split_string_dir   = explode('/',$name_dir_storage) ;
           // dd($split_string_dir);
       }
@@ -37,7 +37,7 @@ class SubscribeNews extends Controller
       News::create([ //salva a notícia no bd
        'title'      => request('title'), //título da notícia
        'bodynews'   => request('bodynews'), //corpo da notícia (descrição)
-       'dirFigure'  => $split_string_dir[2] //split_string_dir[2] encontra-se o nome da imagem bem como sua extensão
+       'dirFigure'  => $split_string_dir[1] //split_string_dir[2] encontra-se o nome da imagem bem como sua extensão
        ]);
       return view('cadastro');
 
